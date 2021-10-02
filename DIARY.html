@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/HOME.css" />
+    <link rel="stylesheet" href="./static/DIARY.css" />
+    <link rel="stylesheet" href="./static/PHOTO.css" />
+    <link rel="stylesheet" href="./static/GUESTROOM.css" />
+    <script src="https://kit.fontawesome.com/666e4f3cfc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+          <div class="column1">
+            <div class="box1_top"><div class="DungGeunMo">TODAY <span style="color: red";>88  </span>| TOTAL 578931</div></div>
+            <div class="box1_main">
+              <div class="profile-box">
+                <div class="profile-img">
+                  <img src="C:/Users/user/OneDrive/바탕 화면/PythonWorkspace/모각코 웹기초 5일차 과제 코드(뼈대)/static/images/profile1.jpg" alt="profile-img" class="profile-img-size">
+                </div>
+                <div class="profile-intro">
+                  <div class="Mongdol">
+                    안녕하세요!<br>
+                    코딩을 하고 있는<br>코딩이입니다!<br>
+                    열심히 코딩을 합시다!<br>
+                    ★화이팅★
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="box2_main_header">
+              <div class="box2_top_left"><div class="DungGeunMo">HJથ 미니홈피♥♡♥ ♪♩</div></div>
+              <div class="box2_top_right KoPubDotumMedium">http://url주소/나중에입력</div>
+            </div>
+            <div class="box2_main">         
+              <div class="box2_text">
+                  <div class="diary-date-box">
+                      <div class="diary-today Cafe24Oneprettynight">09.28<span class="diary-today">TUE</span></div>
+                      <div class="diary-date Cafe24Oneprettynight">
+                          1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+                      </div>
+                  </div>
+                  <div class="diary-scroll-box">
+                      <ul class="diary-content-today">
+                      <li class="diary-contents Bohyun">
+                        <h2><div class="Cafe24Oneprettynight">2021.09.27</div></h2>
+                        <p>==오늘의 일정==</p>
+                        <p>10:00 ~ 12:00 실강 듣기</p>
+                        <p>12:00 ~ 13:30 점심</p>
+                        <p>13:30 ~ 16:30 실강</p> 
+                      </li>
+                      <li class="diary-contents Bohyun">
+                        <h2><div class="Cafe24Oneprettynight">2021.09.28</div></h2>
+                        <p>==오늘의 일정==</p>
+                        <p>9:00 ~ 12:00 녹강 듣기</p>
+                        <p>12:00 ~ 12:15 퀴즈시험</p>
+                        <p>12:15 ~ 13:30 점심</p>
+                        <p>13:30 ~ 18:00 녹강 및 과제</p>
+                      </li>
+                      <li class="diary-contents Bohyun">
+                        <h2><div class="Cafe24Oneprettynight">2021.09.29</div></h2>
+                        <p>==오늘의 일정==</p>
+                        <p>10:30 ~ 12:00 대면강의</p>
+                        <p>12:00 ~ 13:00 점심</p>
+                        <p>13:00 ~ 15:00 실습강의</p>
+                        <p>15:00 ~ 15:15 퀴즈시험</p>
+                        <p>15:15 ~ 16:00 과제</p>
+                      </li>
+                      <div class="button-box">
+                        <button class="diary-botton" onclick="getTextFile()">
+                          <i class="fas fa-lock">MY SECRET DIARY</i>
+                        </button>
+                      </div>
+                      <div class="diary-box" id="secret-box">
+                        <div class="diary-date">HJ의 비밀 일기</div>
+                        <div class="diary-text" id="secret-diary"></div>
+                      </div>
+                    </ul>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="column3">
+            <div class="menu-container">
+              <a href="./HOME.html">HOME</a>
+              <a href="./DIARY.html">DIARY</a>
+              <a href="./PHOTO.html">PHOTO</a>
+              <a href="./GUESTBOOK.html">GUESTBOOK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function getTextFile() {
+        var input = document.createElement("input");
+        input.type = "file";
+        input.accept = "text/plain";
+        input.onchange = function (event) {
+          processFile(event.target.files[0]);
+        };
+        input.click();
+      }
+
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function() {
+          document.getElementById("secret-diary").innerText = reader.result;
+          document.getElementById("secret-box").style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>

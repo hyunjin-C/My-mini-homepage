@@ -1,0 +1,295 @@
+body {
+    background-color: #a3a3a3;
+    background-image: url("../static/images/pattern.png");
+    background-size: 100px;
+  
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .bookcover {
+    background-color: #c0b7df;
+    border-radius: 9px;
+    border: 1px solid #738186;
+  
+    width: 960px;
+    height: 660px;
+    margin: 100px auto;
+  
+    /** .bookdot 요소에서 absolute 속성값을 이용하기 위해 position: relative 로 설정 */
+    position: relative;
+  }
+  
+  .bookdot {
+    border: none;
+    border: 2px dashed whitesmoke;
+    width: 100px auto;
+    height: 628px;
+    border-radius: 9px;
+    margin: 15px;
+    margin-top: 13px;
+  }
+  
+  .page {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 9px;
+    padding: 15px;
+  }
+  
+  .container {
+    width: 100%;
+    flex: 2;
+    background-color: lightgray;
+    border: solid lightgray 1px;
+  }
+  
+  .profile-box {
+    background-color: whitesmoke;
+    flex: 3;
+    border-radius: 9px;
+    border: 1px solid whitesmoke;
+  }
+  
+  .profile-img {
+    text-align:center;
+    padding-top: 10px;
+  }
+  .profile-img-size {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+  }
+  
+  .profile-intro {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .column1 {
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    margin-right: 1.5rem;
+  }
+  
+  .column2 {
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .column3 {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box1_top{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .box1_main {
+    width: 90%;
+    flex: 1;
+    background-color: whitesmoke;
+    border: solid lightgray 1px;
+    border-radius: 9px;
+  }
+  
+  .main_box2_header {
+    flex: 0.1;
+    margin-left: 20px;
+  }
+  
+  .box2_top_left {
+    display:inline-block;
+    flex: 1px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .box2_top_right {
+    display: inline-block;
+    flex: 1;
+    font-size: 13px;
+    margin-left: 50px;
+  }
+  
+  .box2_main {
+    width: 100%;
+    flex: 2;
+    display:flex;
+    background-color: whitesmoke;
+    border: solid lightgray 1px;
+    border-radius: 9px;
+  }
+  
+  .box2_text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .divider {
+    border-right-width: 1.5px;
+    border-right-color: gray;
+    border-right-style: dashed;
+  }
+  
+  .line {
+    border-bottom-width: 2px;
+    border-right-color: gray;
+    border-bottom-style: solid;
+  }
+  
+  .big_title {
+    font-weight: bold;
+    color: darkblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    flex: 0.05;
+    margin-bottom: 5px;
+  }
+  
+  .pink {
+    color:rgb(255, 255, 255);
+    background-color: rgb(228, 179, 186);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    width: 95px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .blue {
+    color:white;
+    background-color: rgb(134, 178, 206);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    width: 95px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  
+  .update {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+  
+  .menu_row {
+    display: flex;
+    flex: 0.2;
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  
+  .menu {
+    display: flex;
+    flex: 0.5;
+    padding-bottom: 5px;
+  }
+
+  .miniroom-box {
+    background-color: whitesmoke;
+    flex: 3;
+    border-radius: 9px;
+    border: 1px solid whitesmoke;
+  }
+
+  .profile-downtown {
+    flex: 0;
+    border: 1px solid whitesmoke;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    position: relative;
+  }
+
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 5px solid #838383;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .profile-dropdown:hover > .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content > a {
+    display: block;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0.2);
+    width: 100%;
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .dropdown-content > a:hover {
+    background-color:whitesmoke;
+  }
+
+  /*메뉴 버튼*/
+
+  .menu-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-container > a {
+    padding: 6px;
+    margin: 6px;
+    background-color: darkorchid;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: DungGeunMo;
+    font-size: 0.85;
+  }
+
+  .menu-container > a:hover {
+    background-color: darkorchid;
+  }
+  
